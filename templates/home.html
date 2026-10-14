@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Home
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="home-section">
+
+
+    <div class="home-content">
+
+        <h1>
+
+            Welcome to<br>
+
+            Employee Management System
+
+        </h1>
+
+
+        <p>
+
+            Manage your employees easily and efficiently.
+
+        </p>
+
+
+        <div class="home-buttons">
+
+
+            <a href="{{ url_for('login') }}"
+               class="btn login-btn">
+
+                Login
+
+            </a>
+
+
+            <a href="{{ url_for('register') }}"
+               class="btn register-btn">
+
+                Register
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="home-image">
+
+        <div class="employee-big-icon">
+
+            👥⚙️
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+{% endblock %}

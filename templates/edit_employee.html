@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Edit Employee
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="form-section">
+
+
+    <div class="employee-form-card">
+
+
+        <h1>
+            Edit Employee
+        </h1>
+
+
+        <form method="POST">
+
+
+            <label>
+                Employee Name
+            </label>
+
+            <input
+                type="text"
+                name="name"
+                value="{{ employee.name }}"
+                required
+            >
+
+
+            <label>
+                Email
+            </label>
+
+            <input
+                type="email"
+                name="email"
+                value="{{ employee.email }}"
+                required
+            >
+
+
+            <label>
+                Phone
+            </label>
+
+            <input
+                type="text"
+                name="phone"
+                value="{{ employee.phone }}"
+                required
+            >
+
+
+            <label>
+                Age
+            </label>
+
+            <input
+                type="number"
+                name="age"
+                value="{{ employee.age }}"
+                required
+            >
+
+
+            <label>
+                Department
+            </label>
+
+            <select name="department">
+
+                <option value="IT"
+                    {% if employee.department == "IT" %}
+                    selected
+                    {% endif %}>
+                    IT
+                </option>
+
+
+                <option value="Finance"
+                    {% if employee.department == "Finance" %}
+                    selected
+                    {% endif %}>
+                    Finance
+                </option>
+
+
+                <option value="Marketing"
+                    {% if employee.department == "Marketing" %}
+                    selected
+                    {% endif %}>
+                    Marketing
+                </option>
+
+
+            </select>
+
+
+            <button type="submit">
+
+                Update Employee
+
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+</section>
+
+
+{% endblock %}

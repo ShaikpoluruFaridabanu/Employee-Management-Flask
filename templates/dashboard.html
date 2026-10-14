@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Dashboard
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="dashboard-section">
+
+
+    <h1>
+
+        Welcome {{ session["username"] }}
+
+    </h1>
+
+
+    <p class="dashboard-text">
+
+        Manage your employees easily.
+
+    </p>
+
+
+    <div class="dashboard-cards">
+
+
+        <a href="{{ url_for('add_employee') }}"
+           class="dashboard-card">
+
+            <div class="card-icon">
+                👤+
+            </div>
+
+            <h3>
+                Add Employee
+            </h3>
+
+        </a>
+
+
+        <a href="{{ url_for('view_employees') }}"
+           class="dashboard-card">
+
+            <div class="card-icon">
+                👁
+            </div>
+
+            <h3>
+                View
+            </h3>
+
+        </a>
+
+
+        <a href="{{ url_for('view_employees') }}"
+           class="dashboard-card">
+
+            <div class="card-icon">
+                🗑
+            </div>
+
+            <h3>
+                Delete
+            </h3>
+
+        </a>
+
+
+        <a href="{{ url_for('logout') }}"
+           class="dashboard-card">
+
+            <div class="card-icon">
+                ↪
+            </div>
+
+            <h3>
+                Logout
+            </h3>
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+{% endblock %}
